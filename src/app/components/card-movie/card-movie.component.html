@@ -1,0 +1,11 @@
+<div class="card">
+  <img style="object-fit: cover;" [src]="movie.image" class="card-img-top" [alt]="movie.image">
+  <div class="card-body">
+    <h5 class="card-title">{{movie.title}}</h5>
+    <div class="d-flex justify-content-end">
+      <button (click)="handleClick(movie.id)" class="btn btn-outline-danger"
+        [ngClass]="{ 'bg-danger text-white': movie.itsFavorite}">
+        <i class="bi bi-suit-heart-fill"></i></button>
+    </div>
+  </div>
+</div>
